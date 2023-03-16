@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Simonetta|Trade+Winds&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translate(-600px) scale(0);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+}
+
+@keyframes logoSpin {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(0);
+  }
+  
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+html {
+  background-image: url(../images/bg-paper.jpg);
+}
+
+h1 {
+  font: 60px 'Trade Winds', 'Times', serif;
+}
+
+header h1 {
+  animation-name: slideFromLeft;
+  animation-duration: 2s;
+}
+
+header img {
+  animation-name: logoSpin;
+  animation-duration: 2s;
+}
+
+nav {
+  background-image: url(../images/nav-bg.png);
+  height: 111px;
+  left: -40px;
+  opacity: .9;
+  position: relative;
+  transform: rotate(-3deg);
+  width: 1044px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  color: #000;
+  display: inline;
+  font: 2em 'Simonetta', 'Times', serif;
+  list-style: none;
+  line-height: 111px;
+  padding: 10px;
+  transition: font-size .5s, color 1s;
+}
+
+nav li:hover {
+  color: #8b0000;
+  font-size: 3em;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: rgb(139,0,0);
+  text-shadow: 0 0 5px #fff;
+}
+
+main {
+  font-family: 'Simonetta', 'Times', serif;
+}
+
+body {
+  background-color: rgba(255, 255, 255, .7);
+  box-shadow: 0 0 5px #000;
+  margin: 5px auto;
+  width: 960px;
+}
+
+main>div img {
+  border: 3px double #000;
+  box-shadow: 0 0 10px #000;
+  transform: perspective(400px) rotateY(45deg);
+  transition: transform .5s;
+}
+
+main>div img:hover {
+  box-shadow: 0 0 10px #37613a;
+  position: absolute;
+  transform: scale(2) rotateY(0);
+  z-index: 1;
+}

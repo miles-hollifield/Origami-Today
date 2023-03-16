@@ -1,0 +1,45 @@
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+}
+
+header h1 {
+  align-self: center;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin: 0;
+}
+
+header img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 10px;
+  padding: 10px;
+}
+
+main {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto auto;
+  margin: 30px;
+}
+
+main>div {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  grid-template-rows: auto;
+}
+
+main>div img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 10px;
+  padding: 0;
+}
+
+main>div>div {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
